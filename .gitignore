@@ -1,0 +1,13 @@
+# Local hosting configuration
+.openai/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependencies and temporary files
+node_modules/
+*.log
+*.tmp
