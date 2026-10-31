@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2026 realzurr (https://github.com/realzurr).
+Original game: Kye 2.0, Copyright (c) 1992 Colin Garbutt.
+Web implementation: GPL-3.0-only with attribution term under section 7(b).
+See LICENSE and ATTRIBUTION.md (or LICENSE.txt and ATTRIBUTION.txt).
+*/
 'use strict';
 const $=id=>document.getElementById(id), {Game,parse,monsters,sliders,timers}=KyeEngine;
 const canvas=$('board'),ctx=canvas.getContext('2d'),T=32;let packs={},pack='DEFAULT.KYE',index=0,game,paused=true,mode='ready',keys=new Set(),pointer=null,last=0,elapsed=0,completed={};

@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2026 realzurr (https://github.com/realzurr).
+Original game: Kye 2.0, Copyright (c) 1992 Colin Garbutt.
+Web implementation: GPL-3.0-only with attribution term under section 7(b).
+See LICENSE and ATTRIBUTION.md (or LICENSE.txt and ATTRIBUTION.txt).
+*/
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
