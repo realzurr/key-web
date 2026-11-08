@@ -38,9 +38,13 @@ O botão **Como jogar** apresenta detalhes das peças e dos mecanismos dentro do
 | Ação | Controle |
 | --- | --- |
 | Mover | Setas ou `W`, `A`, `S`, `D` |
-| Mover nas diagonais | Teclado numérico: `1`, `3`, `7`, `9`, ou combinação de duas direções |
+| Mover nas diagonais | Teclado numérico (`1`, `3`, `7`, `9`), `Q`, `E`, `Z`, `C` ou combinação de duas direções |
 | Guiar com o mouse | Clique e segure no tabuleiro |
 | Jogar em telas de toque | Botões direcionais abaixo do tabuleiro |
+| Desfazer último movimento | `U`, `Backspace` ou botão **Desfazer** |
+| Avançar 1 passo (tick) | `.` ou botão **Passo** |
+| Alternar velocidade | `V` ou botão **Ritmo** (`0.75x`, `1x`, `1.5x`) |
+| Alternar efeitos sonoros | `M` ou botão **Som** |
 | Pausar ou continuar | `P` ou botão **Pausar** |
 | Reiniciar a fase | `R` ou botão **Recomeçar** |
 

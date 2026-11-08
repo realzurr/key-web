@@ -12,6 +12,14 @@ const env={console,Math,Set,Number,String,Object,Array,Error,JSON,document:{getE
 vm.createContext(env);for(const f of ['levels.js','engine.js','art.js','app.js'])vm.runInContext(fs.readFileSync('./dist/'+f,'utf8'),env);
 assert.equal(nodes['level-name'].textContent,'FIRST');assert.equal(nodes.pack.options.length,3);assert.equal(nodes.level.options.length,15);
 nodes.play.onclick();frame(100);events.keydown({code:'ArrowRight',key:'ArrowRight',target:{tagName:'CANVAS'},preventDefault(){},repeat:false});frame(200);assert.equal(nodes.gems.textContent,'1 / 1');assert.equal(nodes['overlay-title'].textContent,'Labirinto resolvido!');
-nodes.play.onclick();assert.equal(nodes['level-name'].textContent,'SECOND');nodes.pause.onclick();assert.equal(nodes['overlay-title'].textContent,'Uma pausa para pensar.');nodes.play.onclick();nodes.restart.onclick();assert.equal(nodes.moves.textContent,0);
+nodes.play.onclick();assert.equal(nodes['level-name'].textContent,'SECOND');nodes.pause.onclick();assert.equal(nodes['overlay-title'].textContent,'Uma pausa para pensar.');nodes.play.onclick();
+events.keydown({code:'ArrowLeft',key:'ArrowLeft',target:{tagName:'CANVAS'},preventDefault(){},repeat:false});
+events.keyup({code:'ArrowLeft',key:'ArrowLeft'});
+frame(300);assert.equal(nodes.moves.textContent,1);
+nodes.undo.onclick();assert.equal(nodes.moves.textContent,0);
+nodes.step.onclick();assert.equal(nodes['pause'].innerHTML,'▶ <span>Continuar</span>');
+nodes.speed.onclick();assert.equal(nodes['speed'].innerHTML,'1.5x <span>Ritmo</span>');
+nodes.mute.onclick();assert.equal(nodes['mute'].innerHTML,'🔇 <span>Som</span>');
+nodes.restart.onclick();assert.equal(nodes.moves.textContent,0);
 nodes.help.onclick();assert.equal(nodes['help-dialog'].open,true);nodes['close-help'].onclick();assert.equal(nodes['help-dialog'].open,false);
-console.log('Interface: inicialização, início, teclado, vitória na primeira fase, próxima fase, pausa, reinício e ajuda OK.');
+console.log('Interface: inicialização, início, buffer de teclado, vitória, próxima fase, pausa, desfazer, passo, velocidade, som, reinício e ajuda OK.');
